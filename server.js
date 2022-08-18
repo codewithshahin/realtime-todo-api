@@ -20,14 +20,14 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
   /*options*/
   cors: {
-    origin: "*",
+    origin: process.env.ORIGN,
   },
 });
 
 //middlewares
 app.use(
   cors({
-    origin: "*",
+    origin: process.env.ORIGN,
   })
 );
 app.use(express.json());
