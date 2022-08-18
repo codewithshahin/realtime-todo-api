@@ -152,6 +152,10 @@ app.put("/users/:id", async (req, res) => {
   res.status(200).json("updated success");
 });
 
+app.get("/", (req, res) => {
+  res.status(200).json("Backed is running...");
+});
+
 //app start
 httpServer.listen(PORT, () => {
   console.log(`Server is running on PORT: http://localhost:${PORT}`);
